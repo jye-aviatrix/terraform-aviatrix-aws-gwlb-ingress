@@ -1,9 +1,9 @@
 ## Prerequsits
-Linux
+Code is currently developed to run locally with following:
 
-Terraform
-
-AWS CLI
+* Linux (Windows Subsystem for Linux)
+* Terraform
+* AWS CLI
 
 Following environment variables need to be set
 ```bash
