@@ -50,6 +50,7 @@ $ aws --version
     * Step 4 can be skipped, as Firewall is configured as one-armed mode, there's no WAN port
     * Step 6 can be skipped, as again Firewall is one-armed mode, there's no need for route table changes
 4. East West transit Firenet firewalls not need to be configured for ingress, but it's there for additional E/W tranffic filtering.
+5. Test web servers are deployed on subnets with 0/0 pointing to IGW, this is to allow the initial bootstrap of web server. You may remove 0/0 route after the deployment.
 
 
 ## Environment created
