@@ -32,6 +32,16 @@ $ aws --version
 **aws-cli/2.3.2** Python/3.8.8 Linux/5.10.60.1-microsoft-standard-WSL2 exe/x86_64.ubuntu.20 prompt/off
 ```
 
+```
+Palo Alto Networks VM-Series Next-Generation Firewall (BYOL)
+10.1.3
+```
+
+```
+Aviatrix Controller
+UserConnect-6.6.5404
+```
+
 ## Technical challenges
 1. Aviatrix Firenet module currently doesn't return Gateway Load Balancer's Service Name
     * as such a bash script **get_vpce_service_name_from_fw_lan.sh** is called to translate:
@@ -40,7 +50,13 @@ $ aws --version
 
 
 ## How to run
-1. Modify **variables.tf** provide account and key_pair_name
+1. Modify **variables.tf** provide:
+    * Aviatrix access account name
+    * EC2 key pair name for test web servers
+    * Region of the deployment
+    * Choose whether bootstrap the Palo firewalls or not, if enable bootstrap, provides:
+        * S3 bucket name
+        * iam role for accessing the content of S3 bucket
 2. Run **tfapply.sh**
 3. Configure the egress transit firenet Palo Altos by following these steps
     

@@ -10,6 +10,21 @@ variable "key_pair_name" {
 variable "region" {
   default = "us-west-1"
 }
+
+variable "enable_firewall_bootstrap" {
+  default = true
+}
+
+variable "bootstrap_bucket_name" {
+  description = "Provide bootstrap S3 bucket name, use when enable_firewall_bootstrap set to true"
+  default = "pan-bootstrap-jye"
+}
+
+variable "bootstrap_iam_role" {
+  description = "Provide bootstrap iam role, use when enable_firewall_bootstrap set to true"
+  default = "bootstrap-VM-S3-role"
+}
+
 variable "vpc_name" {
   default     = "GWLBe-spoke"
   description = "Provide VPC name"

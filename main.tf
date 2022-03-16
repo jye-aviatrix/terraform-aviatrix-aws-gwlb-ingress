@@ -13,6 +13,10 @@ module "transit_firenet_egress" {
   use_gwlb = true
   tags = var.tags
   fw_tags = var.tags
+  bootstrap_bucket_name_1 = var.enable_firewall_bootstrap ? var.bootstrap_bucket_name : null
+  iam_role_1 = var.enable_firewall_bootstrap ? var.bootstrap_iam_role : null
+  firewall_image_version = "10.1.3"
+
 }
 
 module "transit_firenet_east_west" {
@@ -30,6 +34,9 @@ module "transit_firenet_east_west" {
   use_gwlb = true
   tags = var.tags
   fw_tags = var.tags
+  bootstrap_bucket_name_1 = var.enable_firewall_bootstrap ? var.bootstrap_bucket_name : null
+  iam_role_1 = var.enable_firewall_bootstrap ? var.bootstrap_iam_role : null
+  firewall_image_version = "10.1.3"
 }
 
 module "east_west_ingress_spoke" {
