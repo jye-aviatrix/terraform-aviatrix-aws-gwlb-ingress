@@ -8,7 +8,7 @@ variable "key_pair_name" {
   default = "****"  
 }
 variable "region" {
-  default = "us-west-1"
+  default = "****"
 }
 
 variable "enable_firewall_bootstrap" {
@@ -17,12 +17,12 @@ variable "enable_firewall_bootstrap" {
 
 variable "bootstrap_bucket_name" {
   description = "Provide bootstrap S3 bucket name, use when enable_firewall_bootstrap set to true"
-  default = "pan-bootstrap-jye"
+  default = "****"
 }
 
 variable "bootstrap_iam_role" {
   description = "Provide bootstrap iam role, use when enable_firewall_bootstrap set to true"
-  default = "bootstrap-VM-S3-role"
+  default = "****"
 }
 
 variable "vpc_name" {
